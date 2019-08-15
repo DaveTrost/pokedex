@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy|Oswald:500|Press+Start+2P&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-family: 'Luckiest Guy', cursive;
+}
+
+p, select, span {
+    font-family: 'Oswald', sans-serif;
+}
