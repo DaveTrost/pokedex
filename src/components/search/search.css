@@ -1,7 +1,54 @@
-.search {
+#search-component {
     display: flex;
     align-items: center;
-    height: 7vh;
-    background-color: #FFDE00;
+    /* background-color: #FFDE00; */
     background-image: linear-gradient(-45deg, white, #FFDE00);
+}
+#search-component #search-form {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+
+.show-hide-control + .show-hide-container {
+    display: none;
+}
+.show-hide-control:hover + .show-hide-container, .show-hide-container:hover {
+    display: flex;
+}
+
+
+.settings-column {
+    display: flex;
+    flex-flow: column;
+}
+
+
+#pokeball-button button {
+    display: none;
+}
+#pokeball-button span {
+    font-family: 'Luckiest Guy', cursive;
+    color: #ff0000;
+}
+#pokeball-button img {
+    display: none;
+    position: relative;
+    left: -16px;
+    top: 2px;
+    height: 1em;
+}
+
+
+.slider {
+    width: 100%;
+    height: 15px;
+    /* border-radius: 5px;    */
+    background: #d3d3d3;
+    /* outline: none; */
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+.slider:hover {
+    opacity: 1;
 }

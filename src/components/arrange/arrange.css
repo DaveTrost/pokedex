@@ -1,0 +1,9 @@
+.arrange {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 7vh;
+}
+#sort-order {
+    margin-right: 20px;
+}
