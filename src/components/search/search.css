@@ -1,9 +1,9 @@
 #search {
-    margin: 5px;
+    padding: 5px;
     display: flex;
-    align-items: center;
-    /* background-color: #FFDE00; */
-    /* background-image: linear-gradient(-45deg, white, #FFDE00); */
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #FFDE00;
 }
 #search #search-form {
     display: flex;

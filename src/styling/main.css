@@ -14,28 +14,29 @@ label, p, select, span, ::after {
 
 #root {
     display: grid;
-    grid-template-rows: 11vh 9vh 7vh auto;
+    grid-template-rows: 11vh auto 7vh auto;
 }
 
-/* #root {
-    display: grid;
-    grid-template-rows: 11vh 7vh 10vh;
-    grid-template-columns: 20vw 80vw;
-    grid-template-areas: 
-        "header header"
-        "arrange arrange"
-        "search pokedex";
-} */
-/* #header {
-    grid-area: header;
-    grid-row-start: span;
+@media only screen and (min-width: 800px) {
+    #root {
+        display: grid;
+        grid-template-rows: auto 7vh auto;
+        grid-template-columns: 20vw 80vw;
+        grid-template-areas: 
+            "header header"
+            "arrange arrange"
+            "search pokedex";
+    }
+    header {
+        grid-area: header;
+    }
+    #arrange {
+        grid-area: arrange;
+    }
+    #search {
+        grid-area: search;
+    }
+    #pokedex {
+        grid-area: pokedex;
+    }
 }
-#arrange {
-    grid-area: arrange;
-}
-#search {
-    grid-area: search;
-}
-#pokedex {
-    grid-area: pokedex;
-} */
