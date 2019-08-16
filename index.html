@@ -13,9 +13,20 @@
     <link rel="stylesheet" href="src/pokedex/pokedex.css">
 </head>
 <body>
-    <header>
-        <img src="assets/header/Pokedex-icon.png" alt="logo with image of a handheld pokedex">
-        <img src="assets/header/pokedex-title.png" alt="POKEDEX title">
-    </header>
+    <div id="root">
+        <header>
+            <img class="logo-icon" src="assets/header/Pokedex-icon.png" alt="logo with image of a handheld pokedex">
+            <img src="assets/header/pokedex-title.png" alt="POKEDEX title">
+        </header>
+        <section class="search">
+            <img src="assets/search/pokeball-icon.jpg" alt="pokeball thumbnail">
+            <form action="/">
+                <label for="search-field">
+                    Search:
+                    <input type="search" name="search-field" id="search-field">
+                </label>
+            </form>
+        </section>
+    </div>
 </body>
 </html>
