@@ -11,3 +11,31 @@ h1, h2, h3 {
 label, p, select, span, ::after {
     font-family: 'Oswald', sans-serif;
 }
+
+#root {
+    display: grid;
+    grid-template-rows: 11vh 9vh 7vh auto;
+}
+
+/* #root {
+    display: grid;
+    grid-template-rows: 11vh 7vh 10vh;
+    grid-template-columns: 20vw 80vw;
+    grid-template-areas: 
+        "header header"
+        "arrange arrange"
+        "search pokedex";
+} */
+/* #header {
+    grid-area: header;
+    grid-row-start: span;
+}
+#arrange {
+    grid-area: arrange;
+}
+#search {
+    grid-area: search;
+}
+#pokedex {
+    grid-area: pokedex;
+} */

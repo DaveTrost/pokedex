@@ -1,11 +1,11 @@
-#search-component {
+#search {
     margin: 5px;
     display: flex;
     align-items: center;
     /* background-color: #FFDE00; */
     /* background-image: linear-gradient(-45deg, white, #FFDE00); */
 }
-#search-component #search-form {
+#search #search-form {
     display: flex;
     flex-flow: column nowrap;
 }
