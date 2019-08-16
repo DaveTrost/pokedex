@@ -25,7 +25,14 @@
 .show-hide-control + #advanced-search-label + .show-hide-container {
     height: 0px;
     visibility: hidden;
-    /* transform: 500ms ease-in-out; */
+}
+.show-hide-control:checked + #advanced-search-label + .show-hide-container {
+    height: auto;
+    visibility: unset;
+    animation: boingInUp;
+    animation-duration: 350ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
 }
 .show-hide-control:checked + #advanced-search-label {
     opacity: 1;
@@ -37,10 +44,6 @@
 .show-hide-control:checked + #advanced-search-label::before {
     content: "Hide ";
     font-family: 'Luckiest Guy', cursive;
-}
-.show-hide-control:checked + #advanced-search-label + .show-hide-container {
-    height: auto;
-    visibility: unset;
 }
 
 

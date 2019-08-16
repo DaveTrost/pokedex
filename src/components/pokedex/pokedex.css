@@ -17,3 +17,30 @@
     width: 100%;
     object-fit: cover;
 }
+@media only screen and (min-width: 800px) {
+    .poke-card:nth-child(5n+1) img {
+        animation: spaceInLeft;
+        animation-duration: 600ms;
+        animation-timing-function: ease-in;
+    }
+    .poke-card:nth-child(5n+2) img {
+        animation: swap;
+        animation-duration: 800ms;
+        animation-timing-function: ease-in;
+    }
+    .poke-card:nth-child(5n+3) img {
+        animation: spaceInDown;
+        animation-duration: 800ms;
+        animation-timing-function: ease-in;
+    }
+    .poke-card:nth-child(5n+4) img {
+        animation: swashIn;
+        animation-duration: 700ms;
+        animation-timing-function: ease-in;
+    }
+    .poke-card:nth-child(5n+5) img {
+        animation: foolishIn;
+        animation-duration: 1400ms;
+        animation-timing-function: ease-in;
+    }
+}
