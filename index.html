@@ -23,8 +23,8 @@
                 <label for="search-field"><h2>SEARCH:</h2>
                     <input type="search" name="search-field" id="search-field">
                 </label>
-                <label id="advanced-search-label" for="advanced-search"><h2>ADVANCED SEARCH</h2></label>
                 <input class="show-hide-control" type="checkbox" hidden name="advanced-search" id="advanced-search">
+                <label id="advanced-search-label" for="advanced-search"><h2>ADVANCED SEARCH</h2></label>
                 <div class="show-hide-container settings-column">
                     <label class="settings-column" for="filter-by-type">
                         <h2>FILTER BY TYPE:</h2>
@@ -44,7 +44,7 @@
                 </div>
             </form>
         </section>
-        <section class="arrange">
+        <section id="arrange">
             <select name="sort-order" id="sort-order">
                 <option value="" selected hidden>Sort by Option:</option>
                 <option value="a-to-z">alphabetical ascending</option>
@@ -53,6 +53,9 @@
             <label for="page">
                 <button>◄</button><span> page 1 of 1 </span><button>►</button>
             </label>
+        </section>
+        <section id="pokedex">
+
         </section>
     </div>
 </body>

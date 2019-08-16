@@ -12,25 +12,33 @@
 #search-form h2 {
     display: inline-block;
 }
-#search-form #advanced-search-label {
-    margin-left: 70px;
-}
-
 
 
 .show-hide-control {
     padding-left: 10px;
 }
-.show-hide-control::before {
-    content: "Hide Advanced Search";
-    height: 20vh;
+.show-hide-control + #advanced-search-label {
+    margin-left: 60px;
+    color: #FF0000;
+    opacity: 0.4;
 }
-.show-hide-control + .show-hide-container {
+.show-hide-control + #advanced-search-label + .show-hide-container {
     height: 0px;
     visibility: hidden;
     /* transform: 500ms ease-in-out; */
 }
-.show-hide-control:checked + .show-hide-container {
+.show-hide-control:checked + #advanced-search-label {
+    opacity: 1;
+}
+.show-hide-control:not(checked) + #advanced-search-label::before {
+    content: "Show ";
+    font-family: 'Luckiest Guy', cursive;
+}
+.show-hide-control:checked + #advanced-search-label::before {
+    content: "Hide ";
+    font-family: 'Luckiest Guy', cursive;
+}
+.show-hide-control:checked + #advanced-search-label + .show-hide-container {
     height: auto;
     visibility: unset;
 }
