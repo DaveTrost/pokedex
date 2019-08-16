@@ -3,7 +3,12 @@
     justify-content: flex-end;
     align-items: center;
     height: 7vh;
+    padding-right: 10px;
+    background-color: darkslategray;
 }
 #sort-order {
-    margin-right: 20px;
+    margin-right: 10px;
+}
+#sort-order + label {
+    background-color: white;
 }

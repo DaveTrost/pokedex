@@ -8,6 +8,6 @@ h1, h2, h3 {
     font-family: 'Luckiest Guy', cursive;
 }
 
-label, p, select, span {
+label, p, select, span, ::after {
     font-family: 'Oswald', sans-serif;
 }

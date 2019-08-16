@@ -1,42 +1,48 @@
 #search-component {
+    margin: 5px;
     display: flex;
     align-items: center;
     /* background-color: #FFDE00; */
-    background-image: linear-gradient(-45deg, white, #FFDE00);
+    /* background-image: linear-gradient(-45deg, white, #FFDE00); */
 }
 #search-component #search-form {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
+}
+#search-form h2 {
+    display: inline-block;
+}
+#search-form #advanced-search-label {
+    margin-left: 70px;
 }
 
 
+
+.show-hide-control {
+    padding-left: 10px;
+}
+.show-hide-control::before {
+    content: "Hide Advanced Search";
+    height: 20vh;
+}
 .show-hide-control + .show-hide-container {
-    display: none;
+    height: 0px;
+    visibility: hidden;
+    /* transform: 500ms ease-in-out; */
 }
-.show-hide-control:hover + .show-hide-container, .show-hide-container:hover {
-    display: flex;
+.show-hide-control:checked + .show-hide-container {
+    height: auto;
+    visibility: unset;
 }
 
 
 .settings-column {
     display: flex;
     flex-flow: column;
+    /* margin: 5px; */
 }
-
-
-#pokeball-button button {
-    display: none;
-}
-#pokeball-button span {
-    font-family: 'Luckiest Guy', cursive;
-    color: #ff0000;
-}
-#pokeball-button img {
-    display: none;
-    position: relative;
-    left: -16px;
-    top: 2px;
-    height: 1em;
+.settings-column span {
+    margin-left: 20px;
 }
 
 
