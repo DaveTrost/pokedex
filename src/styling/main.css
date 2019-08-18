@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy|Oswald:500|Press+Start+2P&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-family: 'Luckiest Guy', cursive;
+}
+
+label, p, select, span, ::after {
+    font-family: 'Oswald', sans-serif;
+}
+
+#root {
+    display: grid;
+    grid-template-rows: 11vh auto 7vh auto;
+}
+
+@media only screen and (min-width: 800px) {
+    #root {
+        display: grid;
+        grid-template-rows: auto 7vh auto;
+        grid-template-columns: 20vw 80vw;
+        grid-template-areas: 
+            "header header"
+            "arrange arrange"
+            "search pokedex";
+    }
+    header {
+        grid-area: header;
+    }
+    #arrange {
+        grid-area: arrange;
+    }
+    #search {
+        grid-area: search;
+    }
+    #pokedex {
+        grid-area: pokedex;
+    }
+}

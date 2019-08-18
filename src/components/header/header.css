@@ -1,0 +1,11 @@
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    height: calc(10vh + 1vw);
+    background-image: linear-gradient(135deg, white, #3B4CCA);
+}
+img {
+    margin-left: calc(5px + 1vw);
+    height: 100%;
+}

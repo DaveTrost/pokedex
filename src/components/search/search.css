@@ -1,0 +1,72 @@
+#search {
+    padding: 5px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #FFDE00;
+}
+#search #search-form {
+    display: flex;
+    flex-flow: column nowrap;
+}
+#search-form h2 {
+    display: inline-block;
+}
+
+
+.show-hide-control {
+    padding-left: 10px;
+}
+.show-hide-control + #advanced-search-label {
+    margin-left: 60px;
+    color: #FF0000;
+    opacity: 0.4;
+}
+.show-hide-control + #advanced-search-label + .show-hide-container {
+    height: 0px;
+    visibility: hidden;
+}
+.show-hide-control:checked + #advanced-search-label + .show-hide-container {
+    height: auto;
+    visibility: unset;
+}
+@media only screen and (min-width: 800px) {
+    .show-hide-control:checked + #advanced-search-label + .show-hide-container {
+        animation: boingInUp;
+        animation-duration: 350ms;
+        animation-timing-function: ease-in-out;
+    }
+}
+.show-hide-control:checked + #advanced-search-label {
+    opacity: 1;
+}
+.show-hide-control:not(checked) + #advanced-search-label::before {
+    content: "Show ";
+    font-family: 'Luckiest Guy', cursive;
+}
+.show-hide-control:checked + #advanced-search-label::before {
+    content: "Hide ";
+    font-family: 'Luckiest Guy', cursive;
+}
+
+
+.settings-column {
+    display: flex;
+    flex-flow: column;
+    /* margin: 5px; */
+}
+.settings-column span {
+    margin-left: 20px;
+}
+
+
+.slider {
+    width: 100%;
+    height: 15px;
+    background: #d3d3d3;
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+.slider:hover {
+    opacity: 1;
+}

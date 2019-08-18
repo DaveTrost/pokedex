@@ -1,0 +1,106 @@
+.stats {
+    font-family: 'Press Start 2P', cursive;
+}
+
+
+#pokedex {
+    display: grid;
+    margin: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));    
+    grid-gap: 20px;
+    cursor: url(/assets/pokedex/incineroar-pointer.png), auto;
+}
+
+
+.poke-card {
+    background-color: yellow;
+    border-radius: 20px;
+    position: relative;
+}
+.poke-card .name {
+    font-size: 2em;
+    width: 100%;
+    position: absolute;
+    top: 3%;
+    text-align: center;
+}
+.poke-card .info-bottom-left, .poke-card .info-bottom-right {
+    margin: 1%;
+    padding: 3%;
+    width: 47%;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 1%;
+    text-align: center;
+    font-family: 'Press Start 2P';
+    font-size: .9em;
+    font-stretch: condensed;
+    opacity: 0.7;
+}
+.poke-card .info-bottom-left {
+    background-color: red;
+    right: 50%;
+}
+.poke-card .info-bottom-right {
+    background-color: brown;
+    left: 50%;
+}
+.poke-card .info-top-left {
+    background-color: darkslategray;
+
+    margin: 1%;
+    padding: 2%;
+    border-radius: 6px;
+    text-align: center;
+    font-family: 'Press Start 2P';
+    font-size: .7em;
+    font-stretch: condensed;
+    opacity: 0.9;
+
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.poke-card .badge-top-right {
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.poke-card .badge-top-right:hover {
+    cursor: pointer;
+}
+.poke-card .pokemon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media only screen and (min-width: 800px) {
+    .poke-card:nth-child(5n+1) .pokemon {
+        animation: spaceInLeft;
+        animation-duration: 600ms;
+        animation-timing-function: ease-in;
+    }
+    .poke-card:nth-child(5n+2) .pokemon {
+        animation: swap;
+        animation-duration: 800ms;
+        animation-timing-function: ease-in;
+    }
+    .poke-card:nth-child(5n+3) .pokemon {
+        animation: spaceInDown;
+        animation-duration: 800ms;
+        animation-timing-function: ease-in;
+    }
+    .poke-card:nth-child(5n+4) .pokemon {
+        animation: swashIn;
+        animation-duration: 700ms;
+        animation-timing-function: ease-in;
+    }
+    .poke-card:nth-child(5n+5) .pokemon {
+        animation: foolishIn;
+        animation-duration: 1400ms;
+        animation-timing-function: ease-in;
+    }
+}
