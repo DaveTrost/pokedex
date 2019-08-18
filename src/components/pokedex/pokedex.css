@@ -13,18 +13,24 @@
 
 
 .poke-card {
-    background-color: lightgray;
     border-radius: 10px;
     position: relative;
+    transition: all 300ms;
+    transition-delay: 100ms;
+}
+.poke-card:hover {
+    box-shadow: 0 0 8px 3px gray;
+    animation: pulse 300ms;
 }
 .poke-card .name {
     font-size: 2em;
-    width: 90%;
+    width: 83%;
     padding-top: 1%;
     padding-left: 3%;
-    /* text-align: center; */
 }
-.poke-card .info-bottom-left, .poke-card .info-bottom-right {
+
+.poke-card .info-bottom-left, 
+.poke-card .info-bottom-right {
     margin: 1%;
     padding: 3%;
     /* width: 47%; */
@@ -45,7 +51,9 @@
     background-color: brown;
     right: 0;
 }
-.poke-card .info-top-left, .poke-card .info-top-right {
+
+.poke-card .info-top-left, 
+.poke-card .info-top-right {
     color: white;
     margin: 1%;
     padding: 2%;
@@ -58,6 +66,7 @@
     font-size: .7em;
     font-stretch: condensed;
     opacity: 0.9;
+    transition: all 300ms;
 }
 .poke-card .info-top-left {
     left: 0;
@@ -65,6 +74,39 @@
 .poke-card .info-top-right {
     right: 0;
 }
+.poke-card:active .info-top-left, 
+.poke-card:active .info-top-right {
+    top: 10%;
+    left: 50%;
+    right: 50%;
+    opacity: 0;
+}
+
+.poke-card .hud-details {
+    display: none;
+    list-style: none;
+}
+.poke-card:active .hud-details {
+    display: block;
+    color: white;
+    margin: 1%;
+    padding: 2%;
+    border-radius: 6px;
+    background-color: darkslategray;
+    position: absolute;
+    top: 10%;
+    width: 98%;
+    text-align: left;
+    font-family: 'Press Start 2P';
+    font-size: 0.7em;
+    font-stretch: condensed;
+    line-height: 1.4em;
+    opacity: 0.9;
+    z-index: 1;
+    animation: puffIn 150ms;
+    animation-fill-mode: forwards;
+}
+
 .poke-card .badge-top-right {
     width: 10%;
     height: 10%;
@@ -76,6 +118,7 @@
 .poke-card .badge-top-right:hover {
     cursor: pointer;
 }
+
 .poke-card .pokemon {
     width: 100%;
     height: 100%;
@@ -83,30 +126,29 @@
     object-fit: contain;
 }
 @media only screen and (min-width: 800px) {
+    .poke-card .pokemon {
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+    }
     .poke-card:nth-child(5n+1) .pokemon {
         animation: spaceInLeft;
         animation-duration: 600ms;
-        animation-timing-function: ease-in;
     }
     .poke-card:nth-child(5n+2) .pokemon {
         animation: swap;
         animation-duration: 800ms;
-        animation-timing-function: ease-in;
     }
     .poke-card:nth-child(5n+3) .pokemon {
         animation: spaceInDown;
         animation-duration: 800ms;
-        animation-timing-function: ease-in;
     }
     .poke-card:nth-child(5n+4) .pokemon {
         animation: swashIn;
         animation-duration: 700ms;
-        animation-timing-function: ease-in;
     }
     .poke-card:nth-child(5n+5) .pokemon {
         animation: foolishIn;
-        animation-duration: 1400ms;
-        animation-timing-function: ease-in;
+        animation-duration: 1000ms;
     }
 }
 
