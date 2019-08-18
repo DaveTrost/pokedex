@@ -10,6 +10,9 @@ header img {
     height: 100%;
 }
 @media only screen and (min-width: 800px) {
+    header img:first-of-type {
+        margin-left: 5vw; 
+    }
     header img + img {
         margin-left: 25%;
     }

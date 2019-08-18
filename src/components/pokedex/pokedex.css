@@ -51,7 +51,6 @@
 .poke-card .info-bottom-right {
     margin: 1%;
     padding: 3%;
-    /* width: 47%; */
     border-radius: 6px;
     position: absolute;
     bottom: 0;
@@ -68,6 +67,20 @@
 .poke-card .info-bottom-right {
     background-color: brown;
     right: 0;
+}
+
+.poke-card .badge-bottom-right,
+.poke-card .badge-bottom-left {
+    height: 13%;
+    position: absolute;
+    bottom: 1%;
+    border-radius: 100%;
+}
+.poke-card .badge-bottom-right{
+    right: 1%;
+}
+.poke-card .badge-bottom-left {
+    left: 1%;
 }
 
 .poke-card .info-top-left, 
