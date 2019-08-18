@@ -13,7 +13,7 @@ export class Pokemon extends Component {
         const ability2 = pokedata.ability_2 === 'NA' ? '' : `<li>ability: ${pokedata.ability_2}</li>`;
         const eggGroup1 = pokedata.egg_group_1 === 'NA' ? '' : `<li>egg group: ${pokedata.egg_group_1}</li>`;
         const eggGroup2 = pokedata.egg_group_2 === 'NA' ? '' : `<li>egg group: ${pokedata.egg_group_2}</li>`;
-        const badgeBottomRight = pokedata.type_2 === 'NA' ? '' : `<img class="badge-bottom-right" src="assets/pokedex/${pokedata.type_2}.png" alt=" ${pokedata.type_2} icon"></img>`;
+        const badgeBottomRight = pokedata.type_2 === 'NA' ? '' : `<img class="badge-bottom-right" src="assets/pokedex/${pokedata.type_2}.png" alt=" ${pokedata.type_2} icon">`;
         return /*html*/ `
             <div class="poke-card">
                 <input class="active-card" type="checkbox" id="pokemon-id-${this.props.pokemon.id}">
@@ -21,7 +21,6 @@ export class Pokemon extends Component {
                     <div class="background"></div>
                     <h2 class="name">${pokedata.pokemon}</h2>
                     <p class="info-top-right">HP:<br>${pokedata.hp}</p>
-                    </ul>
                     <ul class="hud-details">
                         <li>height: ${pokedata.height}</li>
                         <li>weight: ${pokedata.weight}</li>
@@ -49,5 +48,5 @@ export class Pokemon extends Component {
         `;
         // <p class="info-bottom-left">${pokedata.type_1}</p>
         // <p class="info-bottom-right ${pokedata.type_2 === 'NA' ? 'hidden' : ''}">${pokedata.type_2}</p>
-}
+    }
 }
