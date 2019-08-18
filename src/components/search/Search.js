@@ -2,6 +2,17 @@ import Component from '../../utils/Component.js';
 
 export class Search extends Component {
 
+    onRender() {
+        // var slider = document.getElementById('myRange');
+        // var output = document.getElementById('demo');
+        // output.innerHTML = slider.value; // Display the default slider value
+
+        // // Update the current slider value (each time you drag the slider handle)
+        // slider.oninput = function() {
+        //     output.innerHTML = this.value;
+        // }
+    }
+
     renderHTML() {
         return /*html*/ `
             <section id="search">
@@ -21,11 +32,11 @@ export class Search extends Component {
                         </label>
                         <label class="settings-column" for="filter-by-ability">
                             <h2>FILTER BY ABILITY:</h2>
-                            <span>Attack<input type="range" min="0" max="1000" value="50" clas"slider"></span>
-                            <span>Defense<input type="range" min="0" max="1000" value="50" clas"slider"></span>
-                            <span>Speed<input type="range" min="0" max="1000" value="50" clas"slider"></span>
-                            <span>Special Attack<input type="range" min="0" max="1000" value="50" clas"slider"></span>
-                            <span>Special Defense<input type="range" min="0" max="1000" value="50" clas"slider"></span>
+                            <p><span>Attack<input type="range" min="0" max="1000" value="50" id="attack-slider" class="slider"></span><span></span></p>
+                            <p><span>Defense<input type="range" min="0" max="1000" value="50" id="defense-slider" class="slider"></span><span></span></p>
+                            <p><span>Speed<input type="range" min="0" max="1000" value="50" id="speed-slider" class="slider"></span><span></span></p>
+                            <p><span>Special Attack<input type="range" min="0" max="1000" value="50" id="special-attack-slider" class="slider"></span><span></span></p>
+                            <p><span>Special Defense<input type="range" min="0" max="1000" value="50" id="special-defense-slider" class="slider"></span><span></span></p>
                         </label>
                     </div>
                 </form>
