@@ -1,5 +1,5 @@
 import Component from '../../utils/Component.js';
-import { Header } from '../header/Header-class.js';
+import { Header } from '../header/Header.js';
 import { Search } from '../search/Search.js';
 import { Arrange } from '../arrange/Arrange.js';
 import { Pokedex } from './Pokedex.js';
