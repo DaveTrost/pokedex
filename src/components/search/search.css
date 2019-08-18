@@ -3,13 +3,14 @@
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    background-color: #FFDE00;
+    background-image: linear-gradient(-80deg, white, #FFDE00);
+    position: relative;
 }
 #search #search-form {
     display: flex;
     flex-flow: column nowrap;
 }
-#search-form h2 {
+#search h2 {
     display: inline-block;
 }
 
@@ -18,9 +19,11 @@
     padding-left: 10px;
 }
 .show-hide-control + #advanced-search-label {
-    margin-left: 60px;
     color: #FF0000;
     opacity: 0.4;
+}
+.show-hide-control + #advanced-search-label h2{
+    display: inline-block;
 }
 .show-hide-control + #advanced-search-label + .show-hide-container {
     height: 0px;
@@ -41,11 +44,13 @@
     opacity: 1;
 }
 .show-hide-control:not(checked) + #advanced-search-label::before {
-    content: "Show ";
+    display: inline-block;
+    content: "Show\00a0";
     font-family: 'Luckiest Guy', cursive;
 }
 .show-hide-control:checked + #advanced-search-label::before {
-    content: "Hide ";
+    display: inline-block;
+    content: "Hide\00a0";
     font-family: 'Luckiest Guy', cursive;
 }
 
@@ -53,20 +58,42 @@
 .settings-column {
     display: flex;
     flex-flow: column;
-    /* margin: 5px; */
 }
 .settings-column span {
     margin-left: 20px;
 }
 
+#search img {
+    display: none;
+}
+@media only screen and (min-width: 800px) {
+    #search img {
+        display: block;
+        z-index: 1;
+        width: 12%;
+        position: fixed;
+        left: 2%;
+        bottom: 2%;
+    }
 
-.slider {
-    width: 100%;
-    height: 15px;
-    background: #d3d3d3;
-    opacity: 0.7;
-    transition: opacity .2s;
+    #search img:hover {
+        animation: spin 350ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    #search img:active {
+        animation: spin 350ms infinite, runaway 500ms;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+    }
+    @keyframes spin {
+        0% {transform: rotate(0deg);}
+        100% {transform: rotate(360deg);}
+    }
+    @keyframes runaway {
+        0% {left: 2%;}
+        99% {opacity: 1;}
+        100% {left: 113%; opacity: 0;}
+    }
 }
-.slider:hover {
-    opacity: 1;
-}
+
