@@ -15,7 +15,7 @@ export class App extends Component {
         const search = new Search();
         dom.appendChild(search.renderDOM());
 
-        const arrange = new Arrange();
+        const arrange = new Arrange({ options: [] });
         dom.appendChild(arrange.renderDOM());
 
         const pokedex = new Pokedex({ pokemons: [] });
@@ -29,9 +29,13 @@ export class App extends Component {
         const options = hashStorage.get();
         const pokemonData = retrieveFromPokedex(options);
         pokemonData.then(data => {
+            arrange.update({ 
+                options: options,
+                pokeCount: data.count,
+                perPage: data.perPage
+            });
             pokedex.update({ pokemons: data.results });
         });
-        arrange.update({ options: options });
     }
 
     renderHTML() {
