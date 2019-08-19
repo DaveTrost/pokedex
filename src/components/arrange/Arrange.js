@@ -4,28 +4,21 @@ import hashStorage from '../../services/hash-storage.js';
 export class Arrange extends Component {
 
     onRender(dom) {
-        this.updatePaging(dom);
-    }
-
-    updatePaging(dom) {
+        const pageDisplay = dom.querySelector('label span');
         const pageBack = dom.querySelector('label button:first-of-type');
         const pageForward = dom.querySelector('label button:last-of-type');
-        const pageDisplay = dom.querySelector('label span');
-        let currentPage = hashStorage.get().page || 1;
-        pageDisplay.textContent = ` page ${currentPage} of 41 `;
-        if(currentPage === 1) {
-            pageBack.disabled = true;
-        }
-        pageBack.addEventListener('click', () => {
-            currentPage = hashStorage.get().page || 1;
-            hashStorage.set({ page: +currentPage - 1 });
-            pageDisplay.textContent = ` page ${+currentPage - 1} of 41 `;
-        });
-        pageForward.addEventListener('click', () => {
-            currentPage = hashStorage.get().page || 1;
-            hashStorage.set({ page: +currentPage + 1 });
-            pageDisplay.textContent = ` page ${+currentPage + 1} of 41 `;
-        });
+
+        pageBack.addEventListener('click', () => this.updatePaging(pageDisplay, pageBack, -1));
+        pageForward.addEventListener('click', () => this.updatePaging(pageDisplay, pageBack, 1));
+        this.updatePaging(pageDisplay, pageBack, 0);
+    }
+
+    updatePaging(pageDisplay, backButton, pageChange = 0) {
+        const newPage = +(hashStorage.get().page || 1) + pageChange;
+
+        pageDisplay.textContent = ` page ${newPage} of 41 `;
+        backButton.disabled = newPage === 1 ? true : false;
+        hashStorage.set({ page: newPage });
     }
 
     renderHTML() {
