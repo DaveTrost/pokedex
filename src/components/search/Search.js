@@ -11,7 +11,11 @@ export class Search extends Component {
             event.preventDefault();
             const searchData = new FormData(searchForm);
             const searchTerm = searchData.get('search-field') || '';
+            const filterTypes = searchData.getAll('type');
+            const filterTypesUsable = filterTypes.filter((type) => type !== 'all');
+            const typeString = filterTypesUsable.join();
 
+            hashStorage.set({ type: typeString });
             hashStorage.set({ pokemon: searchTerm });
             hashStorage.set({ page: 1 });
         });
@@ -36,19 +40,27 @@ export class Search extends Component {
                     <div class="show-hide-container settings-column">
                         <label class="settings-column" for="filter-by-type">
                             <h2>FILTER BY TYPE:</h2>
-                            <span><input checked type="checkbox" name="all-types">All Types</span>
-                            <span><input type="checkbox" name="ground-types">Ground</span>
-                            <span><input type="checkbox" name="fire-types">Fire</span>
-                            <span><input type="checkbox" name="psychic-types">Pyschic</span>
+                            <label><input checked type="checkbox" value="all" name="type">All Types</label>
+                            <label><input type="checkbox" value="normal" name="type">Normal</label>
+                            <label><input type="checkbox" value="fire" name="type">Fire</label>
+                            <label><input type="checkbox" value="water" name="type">Water</label>
+                            <label><input type="checkbox" value="electric" name="type">Electric</label>
+                            <label><input type="checkbox" value="grass" name="type">Grass</label>
+                            <label><input type="checkbox" value="ice" name="type">Ice</label>
+                            <label><input type="checkbox" value="fighting" name="type">Fighting</label>
+                            <label><input type="checkbox" value="poison" name="type">Poison</label>
+                            <label><input type="checkbox" value="ground" name="type">Ground</label>
+                            <label><input type="checkbox" value="flying" name="type">Flying</label>
+                            <label><input type="checkbox" value="psychic" name="type">Psychic</label>
+                            <label><input type="checkbox" value="bug" name="type">Bug</label>
+                            <label><input type="checkbox" value="rock" name="type">Rock</label>
+                            <label><input type="checkbox" value="ghost" name="type">Ghost</label>
+                            <label><input type="checkbox" value="dragon" name="type">Dragon</label>
+                            <label><input type="checkbox" value="dark" name="type">Dark</label>
+                            <label><input type="checkbox" value="steel" name="type">Steel</label>
+                            <label><input type="checkbox" value="fairy" name="type">Fairy</label>
                         </label>
-                        <label class="settings-column" for="filter-by-ability">
-                            <h2>FILTER BY ABILITY:</h2>
-                            <p><span>Attack<input type="range" min="0" max="1000" value="50" id="attack-slider" class="slider"></span><span></span></p>
-                            <p><span>Defense<input type="range" min="0" max="1000" value="50" id="defense-slider" class="slider"></span><span></span></p>
-                            <p><span>Speed<input type="range" min="0" max="1000" value="50" id="speed-slider" class="slider"></span><span></span></p>
-                            <p><span>Special Attack<input type="range" min="0" max="1000" value="50" id="special-attack-slider" class="slider"></span><span></span></p>
-                            <p><span>Special Defense<input type="range" min="0" max="1000" value="50" id="special-defense-slider" class="slider"></span><span></span></p>
-                        </label>
+                        <button type="submit">Go</button>
                     </div>
                 </form>
             </section>

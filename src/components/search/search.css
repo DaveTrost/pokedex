@@ -59,8 +59,13 @@
     display: flex;
     flex-flow: column;
 }
-.settings-column span {
+.settings-column span, .settings-column label {
     margin-left: 20px;
+}
+.settings-column button {
+    margin-left: 20px;
+    font-size: 1.2em;
+    font-family: 'Luckiest Guy', cursive;
 }
 
 #search img {
