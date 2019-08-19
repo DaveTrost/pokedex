@@ -44,7 +44,7 @@ test('test name', assert => {
             <label for="pokemon-id-249">
                 <div class="background"></div>
                 <h2 class="name">houndoom-mega</h2>
-                <p class="info-top-right">HP:<br>75</p>
+                <p class="info-bottom-middle">stats</p>
                 <ul class="hud-details">
                     <li>height: 19</li>
                     <li>weight: 495</li>

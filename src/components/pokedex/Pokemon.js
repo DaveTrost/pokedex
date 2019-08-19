@@ -20,7 +20,7 @@ export class Pokemon extends Component {
                 <label for="pokemon-id-${pokedata.id}">
                     <div class="background"></div>
                     <h2 class="name">${pokedata.pokemon}</h2>
-                    <p class="info-top-right">HP:<br>${pokedata.hp}</p>
+                    <p class="info-bottom-middle">stats</p>
                     <ul class="hud-details">
                         <li>height: ${pokedata.height}</li>
                         <li>weight: ${pokedata.weight}</li>

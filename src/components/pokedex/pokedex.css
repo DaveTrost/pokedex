@@ -7,7 +7,7 @@
     display: grid;
     margin: 15px;
     margin-top: 0;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));    
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     grid-gap: 20px;
     cursor: url(/assets/pokedex/incineroar-pointer.png), auto;
 }
@@ -24,10 +24,10 @@
     transition-delay: 100ms;
 }
 @media only screen and (min-width: 800px) {
-.poke-card:hover {
-    box-shadow: 0 0 8px 3px gray;
-    animation: pulse 300ms;
-        cursor: help;
+    .poke-card:hover {
+        box-shadow: 0 0 8px 3px gray;
+        animation: pulse 300ms;
+        cursor: pointer;
     }
 }
 .poke-card .background {
@@ -49,6 +49,7 @@
 }
 
 .poke-card .info-bottom-left, 
+.poke-card .info-bottom-middle, 
 .poke-card .info-bottom-right {
     margin: 1%;
     padding: 3%;
@@ -62,12 +63,57 @@
     opacity: 0.7;
 }
 .poke-card .info-bottom-left {
-    background-color: red;
     left: 0;
 }
+.poke-card .info-bottom-middle {
+    left: 35%;
+    width: 30%;
+    color: white;
+    margin: 1%;
+    padding: 2%;
+    border-radius: 6px;
+    background-color: darkslategray;
+    font-size: .7em;
+    cursor: pointer;
+    transition: all 350ms;
+}
+.active-card:checked + label .info-bottom-middle {
+    bottom: 50%;
+    width: 98%;
+    left: 0;
+    opacity: 0;
+}
 .poke-card .info-bottom-right {
-    background-color: brown;
     right: 0;
+}
+
+.poke-card .hud-details {
+    display: none;
+    list-style: none;
+    cursor: pointer;
+}
+.active-card:checked + label .hud-details {
+    display: block;
+    color: white;
+    margin: 1%;
+    padding: 2%;
+    border-radius: 6px;
+    background-color: darkslategray;
+    position: absolute;
+    top: 10%;
+    width: 98%;
+    text-align: left;
+    font-family: 'Press Start 2P';
+    font-size: 0.7em;
+    font-stretch: condensed;
+    line-height: 1.4em;
+    opacity: 0.85;
+    z-index: 1;
+    animation: puffIn 350ms;
+    animation-timing-function: ease-in;
+}
+.hud-details .smaller-line-height {
+    line-height: 0.7em;
 }
 
 .poke-card .badge-bottom-right,
@@ -112,33 +158,6 @@
     left: 50%;
     right: 50%;
     opacity: 0;
-}
-
-.poke-card .hud-details {
-    display: none;
-    list-style: none;
-}
-.active-card:checked + label .hud-details {
-    display: block;
-    color: white;
-    margin: 1%;
-    padding: 2%;
-    border-radius: 6px;
-    background-color: darkslategray;
-    position: absolute;
-    top: 10%;
-    width: 98%;
-    text-align: left;
-    font-family: 'Press Start 2P';
-    font-size: 0.7em;
-    font-stretch: condensed;
-    line-height: 1.4em;
-    opacity: 0.85;
-    z-index: 1;
-    animation: puffIn 150ms;
-}
-.hud-details .smaller-line-height {
-    line-height: 0.7em;
 }
 
 .poke-card .badge-top-right {
