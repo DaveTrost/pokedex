@@ -1,16 +1,11 @@
-.stats {
-    font-family: 'Press Start 2P', cursive;
-}
-
-
 #pokedex {
     display: grid;
-    margin: 15px;
+    padding: 35px;
+    padding-top: 5px;
     margin-top: 0;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    grid-gap: 20px;
-    cursor: url(/assets/pokedex/incineroar-pointer.png), auto;
-}
+    grid-gap: 40px;
+}    
 
 
 .active-card {
