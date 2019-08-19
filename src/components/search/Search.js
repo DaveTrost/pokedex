@@ -5,7 +5,7 @@ export class Search extends Component {
 
     onRender(dom) {
         const searchForm = dom.querySelector('#search-form');
-        searchForm.querySelector('#search-field').value = hashStorage.get().pokemon;
+        searchForm.querySelector('#search-field').value = hashStorage.get().pokemon || '';
 
         searchForm.addEventListener('submit', (event) => {
             event.preventDefault();
