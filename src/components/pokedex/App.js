@@ -21,11 +21,12 @@ export class App extends Component {
         const pokedex = new Pokedex({ pokemons: [] });
         dom.appendChild(pokedex.renderDOM());
         
-        window.addEventListener('hashchange', () => this.updateResultsOnPage(pokedex, arrange));
-        this.updateResultsOnPage(pokedex, arrange);
+        window.addEventListener('hashchange', () => this.updateResultsOnPage(pokedex, arrange, search));
+        this.updateResultsOnPage(pokedex, arrange, search);
     }
 
-    updateResultsOnPage(pokedex, arrange) {
+    updateResultsOnPage(pokedex, arrange, search) {
+        search.update();
         const options = hashStorage.get();
         const pokemonData = retrieveFromPokedex(options);
         pokemonData.then(data => {
