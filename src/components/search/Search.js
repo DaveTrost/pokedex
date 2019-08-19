@@ -1,12 +1,23 @@
 import Component from '../../utils/Component.js';
+import hashStorage from '../../services/hash-storage.js';
 
 export class Search extends Component {
 
-    onRender() {
+    onRender(dom) {
+        const searchForm = dom.querySelector('#search-form');
+        searchForm.querySelector('#search-field').value = hashStorage.get().pokemon;
+
+        searchForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const searchData = new FormData(searchForm);
+            const searchTerm = searchData.get('search-field') || '';
+
+            hashStorage.set({ pokemon: searchTerm });
+            hashStorage.set({ page: 1 });
+        });
         // var slider = document.getElementById('myRange');
         // var output = document.getElementById('demo');
         // output.innerHTML = slider.value; // Display the default slider value
-
         // // Update the current slider value (each time you drag the slider handle)
         // slider.oninput = function() {
         //     output.innerHTML = this.value;
@@ -25,10 +36,10 @@ export class Search extends Component {
                     <div class="show-hide-container settings-column">
                         <label class="settings-column" for="filter-by-type">
                             <h2>FILTER BY TYPE:</h2>
-                            <span><input checked type="checkbox" name="search-field" id="search-field">All Types</span>
-                            <span><input type="checkbox" name="search-field" id="search-field">Ground</span>
-                            <span><input type="checkbox" name="search-field" id="search-field">Fire</span>
-                            <span><input type="checkbox" name="search-field" id="search-field">Pyschic</span>
+                            <span><input checked type="checkbox" name="all-types">All Types</span>
+                            <span><input type="checkbox" name="ground-types">Ground</span>
+                            <span><input type="checkbox" name="fire-types">Fire</span>
+                            <span><input type="checkbox" name="psychic-types">Pyschic</span>
                         </label>
                         <label class="settings-column" for="filter-by-ability">
                             <h2>FILTER BY ABILITY:</h2>
