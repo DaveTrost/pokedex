@@ -40,7 +40,7 @@ export class App extends Component {
     }
 
     renderHTML() {
-        return /*html*/ `<main></main>`;
+        return /*html*/ `<main  class="parallax__layer parallax__layer--base"></main>`;
     }
 }
 

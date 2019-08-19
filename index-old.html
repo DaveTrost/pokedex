@@ -15,8 +15,12 @@
     <link rel="stylesheet" href="src/components/pokedex/pokedex.css">
 </head>
 <body>
-    <div id="root">
-        <main>
+    <div id="root" class="parallax">
+        <div class="parallax__layer parallax__layer--back">
+            <img src="assets/pokedex/background.jpg" alt="background image">
+            <img src="assets/pokedex/background.jpg" alt="background image">
+        </div>
+        <main  class="parallax__layer parallax__layer--base">
             <header>
                 <img class="logo-icon" src="assets/header/Pokedex-icon.png" alt="logo with image of a handheld pokedex">
                 <a href="/"><img src="assets/header/pokedex-title.png" alt="POKEDEX title"></a>
@@ -88,12 +92,12 @@
                         <img class ="pokemon" src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/229_f2.png" alt="a pokemon called houndoom-mega">
                     </label>
                 </div>
-                <div class="poke-card">
+                <div class="poke-card" style="background-color: grey">
                     <input class="active-card" type="checkbox" id="pokemon-id-249">
                     <label for="pokemon-id-249">
                         <div class="background"></div>
                         <h2 class="name">houndoom-mega</h2>
-                        <p class="info-top-right">HP:<br>75</p>
+                        <p class="info-bottom-middle">stats</p>
                         <ul class="hud-details">
                             <li>height: 19</li>
                             <li>weight: 495</li>
@@ -116,12 +120,12 @@
                         <img class ="pokemon" src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/229_f2.png" alt="a pokemon called houndoom-mega">
                     </label>
                 </div>
-                <div class="poke-card">
+                <div class="poke-card" style="background-color: grey">
                     <input class="active-card" type="checkbox" id="pokemon-id-249">
                     <label for="pokemon-id-249">
                         <div class="background"></div>
                         <h2 class="name">houndoom-mega</h2>
-                        <p class="info-top-right">HP:<br>75</p>
+                        <p class="info-bottom-middle">stats</p>
                         <ul class="hud-details">
                             <li>height: 19</li>
                             <li>weight: 495</li>
@@ -144,12 +148,12 @@
                         <img class ="pokemon" src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/229_f2.png" alt="a pokemon called houndoom-mega">
                     </label>
                 </div>
-                <div class="poke-card">
+                <div class="poke-card" style="background-color: grey">
                     <input class="active-card" type="checkbox" id="pokemon-id-249">
                     <label for="pokemon-id-249">
                         <div class="background"></div>
                         <h2 class="name">houndoom-mega</h2>
-                        <p class="info-top-right">HP:<br>75</p>
+                        <p class="info-bottom-middle">stats</p>
                         <ul class="hud-details">
                             <li>height: 19</li>
                             <li>weight: 495</li>
@@ -172,96 +176,12 @@
                         <img class ="pokemon" src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/229_f2.png" alt="a pokemon called houndoom-mega">
                     </label>
                 </div>
-                <div class="poke-card">
+                <div class="poke-card" style="background-color: grey">
                     <input class="active-card" type="checkbox" id="pokemon-id-249">
                     <label for="pokemon-id-249">
                         <div class="background"></div>
                         <h2 class="name">houndoom-mega</h2>
-                        <p class="info-top-right">HP:<br>75</p>
-                        <ul class="hud-details">
-                            <li>height: 19</li>
-                            <li>weight: 495</li>
-                            <li>hit points: 75</li>
-                            <li>speed: 115</li>
-                            <li class="smaller-line-height">&nbsp</li>
-                            <li>attack: 90</li>
-                            <li>defense: 90</li>
-                            <li>special attack: 140</li>
-                            <li>special defense: 90</li>
-                            <li class="smaller-line-height">&nbsp</li>
-                            <li>ability: solar-power</li>
-                            <li class="smaller-line-height">&nbsp</li>
-                            <li>egg group: ground</li>
-                            <li>evolves from: NA</li>
-                        </ul>
-                        <img class="badge-top-right" src="assets/pokedex/evolution-badge.png" alt="evolution badge">
-                        <img class="badge-bottom-left" src="assets/pokedex/dark.png" alt=" dark icon">
-                        <img class="badge-bottom-right" src="assets/pokedex/fire.png" alt=" fire icon">
-                        <img class ="pokemon" src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/229_f2.png" alt="a pokemon called houndoom-mega">
-                    </label>
-                </div>
-                <div class="poke-card">
-                    <input class="active-card" type="checkbox" id="pokemon-id-249">
-                    <label for="pokemon-id-249">
-                        <div class="background"></div>
-                        <h2 class="name">houndoom-mega</h2>
-                        <p class="info-top-right">HP:<br>75</p>
-                        <ul class="hud-details">
-                            <li>height: 19</li>
-                            <li>weight: 495</li>
-                            <li>hit points: 75</li>
-                            <li>speed: 115</li>
-                            <li class="smaller-line-height">&nbsp</li>
-                            <li>attack: 90</li>
-                            <li>defense: 90</li>
-                            <li>special attack: 140</li>
-                            <li>special defense: 90</li>
-                            <li class="smaller-line-height">&nbsp</li>
-                            <li>ability: solar-power</li>
-                            <li class="smaller-line-height">&nbsp</li>
-                            <li>egg group: ground</li>
-                            <li>evolves from: NA</li>
-                        </ul>
-                        <img class="badge-top-right" src="assets/pokedex/evolution-badge.png" alt="evolution badge">
-                        <img class="badge-bottom-left" src="assets/pokedex/dark.png" alt=" dark icon">
-                        <img class="badge-bottom-right" src="assets/pokedex/fire.png" alt=" fire icon">
-                        <img class ="pokemon" src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/229_f2.png" alt="a pokemon called houndoom-mega">
-                    </label>
-                </div>
-                <div class="poke-card">
-                    <input class="active-card" type="checkbox" id="pokemon-id-249">
-                    <label for="pokemon-id-249">
-                        <div class="background"></div>
-                        <h2 class="name">houndoom-mega</h2>
-                        <p class="info-top-right">HP:<br>75</p>
-                        <ul class="hud-details">
-                            <li>height: 19</li>
-                            <li>weight: 495</li>
-                            <li>hit points: 75</li>
-                            <li>speed: 115</li>
-                            <li class="smaller-line-height">&nbsp</li>
-                            <li>attack: 90</li>
-                            <li>defense: 90</li>
-                            <li>special attack: 140</li>
-                            <li>special defense: 90</li>
-                            <li class="smaller-line-height">&nbsp</li>
-                            <li>ability: solar-power</li>
-                            <li class="smaller-line-height">&nbsp</li>
-                            <li>egg group: ground</li>
-                            <li>evolves from: NA</li>
-                        </ul>
-                        <img class="badge-top-right" src="assets/pokedex/evolution-badge.png" alt="evolution badge">
-                        <img class="badge-bottom-left" src="assets/pokedex/dark.png" alt=" dark icon">
-                        <img class="badge-bottom-right" src="assets/pokedex/fire.png" alt=" fire icon">
-                        <img class ="pokemon" src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/229_f2.png" alt="a pokemon called houndoom-mega">
-                    </label>
-                </div>
-                <div class="poke-card">
-                    <input class="active-card" type="checkbox" id="pokemon-id-249">
-                    <label for="pokemon-id-249">
-                        <div class="background"></div>
-                        <h2 class="name">houndoom-mega</h2>
-                        <p class="info-top-right">HP:<br>75</p>
+                        <p class="info-bottom-middle">stats</p>
                         <ul class="hud-details">
                             <li>height: 19</li>
                             <li>weight: 495</li>

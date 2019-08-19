@@ -43,4 +43,48 @@ main {
     .js-loading *, .js-loading *:before, .js-loading *:after {
         animation-play-state: paused !important;
     }
+
+    /* Class definitions for parallax in pure CSS are from:
+        https://keithclark.co.uk/articles/pure-css-parallax-websites/ */
+    .parallax {
+        perspective: 1px;
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .parallax__layer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    .parallax__layer--base {
+        transform: translateZ(0);
+    }
+    .parallax__layer--back {
+        transform: translateZ(-2px) scale(3);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+    .parallax__layer--back img {
+        display: block;
+        position: absolute;
+        left: 19.5%;
+        right: 0;
+        width: 80vw;
+        /* height: 320vw; */
+        /* object-fit: fill; */
+        opacity: 0.5;
+    }
+    .parallax__layer--back img:first-of-type {
+        top: 10%;
+    }
+    .parallax__layer--back img:last-of-type {
+        top: calc(10% + 320vw);
+    }
 }
