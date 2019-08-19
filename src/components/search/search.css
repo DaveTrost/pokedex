@@ -1,6 +1,5 @@
 #search {
     padding: 5px;
-    height: auto;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -28,11 +27,11 @@
 }
 .show-hide-control + #advanced-search-label + .show-hide-container {
     height: 0px;
-    visibility: hidden;
+    display: none;
 }
 .show-hide-control:checked + #advanced-search-label + .show-hide-container {
     height: auto;
-    visibility: unset;
+    display: block;
 }
 @media only screen and (min-width: 800px) {
     .show-hide-control:checked + #advanced-search-label + .show-hide-container {
